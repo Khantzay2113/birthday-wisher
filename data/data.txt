@@ -1,3 +1,0 @@
-Usernames,Passwords
-Ellie,316
-Joe,216

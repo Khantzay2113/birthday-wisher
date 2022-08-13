@@ -6,6 +6,8 @@ import random
 import smtplib
 import ssl
 
+count = 13
+
 def addmails(receiver_names,emails,dates,months):         
         user_data = {}
 
@@ -135,15 +137,13 @@ def c_and_sendmail():
 
 
 if __name__ == "__main__":
-        app.run(host='0.0.0.0',port=random.randint(2000,9000))
-
-while True:
     import datetime
-    count = 13
     now = datetime.datetime.today()
     if now.day == count:
         print(count)
         print('ok')
+        c_and_sendmail()
         count += 1
 
     print(count)
+    app.run(host='0.0.0.0',port=random.randint(2000,9000))
